@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07F0B44B1C7C46AB00BA8B8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0B44A1C7C46AB00BA8B8F /* main.m */; };
+		07F0B44E1C7C46AB00BA8B8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0B44D1C7C46AB00BA8B8F /* AppDelegate.m */; };
+		07F0B4561C7C46AB00BA8B8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F0B4551C7C46AB00BA8B8F /* Assets.xcassets */; };
+		07F0B4591C7C46AB00BA8B8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F0B4571C7C46AB00BA8B8F /* LaunchScreen.storyboard */; };
+		07F0B4621C7C4A8F00BA8B8F /* DYHorizonalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0B4611C7C4A8F00BA8B8F /* DYHorizonalVC.m */; };
+		07F0B4651C7C50D700BA8B8F /* VC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0B4641C7C50D700BA8B8F /* VC1.m */; };
+		07F0B4681C7C50E200BA8B8F /* VC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0B4671C7C50E200BA8B8F /* VC2.m */; };
+		07F0B46B1C7C557800BA8B8F /* DYTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0B46A1C7C557800BA8B8F /* DYTitleView.m */; };
+		07F0B46E1C7C62AD00BA8B8F /* VC3.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0B46D1C7C62AD00BA8B8F /* VC3.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07F0B4461C7C46AB00BA8B8F /* 类网易新闻横向滑动的实现方案2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "类网易新闻横向滑动的实现方案2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F0B44A1C7C46AB00BA8B8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07F0B44C1C7C46AB00BA8B8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07F0B44D1C7C46AB00BA8B8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07F0B4551C7C46AB00BA8B8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07F0B4581C7C46AB00BA8B8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07F0B45A1C7C46AB00BA8B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07F0B4601C7C4A8F00BA8B8F /* DYHorizonalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYHorizonalVC.h; sourceTree = "<group>"; };
+		07F0B4611C7C4A8F00BA8B8F /* DYHorizonalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYHorizonalVC.m; sourceTree = "<group>"; };
+		07F0B4631C7C50D700BA8B8F /* VC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VC1.h; sourceTree = "<group>"; };
+		07F0B4641C7C50D700BA8B8F /* VC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC1.m; sourceTree = "<group>"; };
+		07F0B4661C7C50E200BA8B8F /* VC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VC2.h; sourceTree = "<group>"; };
+		07F0B4671C7C50E200BA8B8F /* VC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC2.m; sourceTree = "<group>"; };
+		07F0B4691C7C557800BA8B8F /* DYTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYTitleView.h; sourceTree = "<group>"; };
+		07F0B46A1C7C557800BA8B8F /* DYTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYTitleView.m; sourceTree = "<group>"; };
+		07F0B46C1C7C62AD00BA8B8F /* VC3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VC3.h; sourceTree = "<group>"; };
+		07F0B46D1C7C62AD00BA8B8F /* VC3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC3.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07F0B4431C7C46AB00BA8B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07F0B43D1C7C46AB00BA8B8F = {
+			isa = PBXGroup;
+			children = (
+				07F0B4481C7C46AB00BA8B8F /* 类网易新闻横向滑动的实现方案2 */,
+				07F0B4471C7C46AB00BA8B8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07F0B4471C7C46AB00BA8B8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07F0B4461C7C46AB00BA8B8F /* 类网易新闻横向滑动的实现方案2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07F0B4481C7C46AB00BA8B8F /* 类网易新闻横向滑动的实现方案2 */ = {
+			isa = PBXGroup;
+			children = (
+				07F0B44C1C7C46AB00BA8B8F /* AppDelegate.h */,
+				07F0B44D1C7C46AB00BA8B8F /* AppDelegate.m */,
+				07F0B4601C7C4A8F00BA8B8F /* DYHorizonalVC.h */,
+				07F0B4611C7C4A8F00BA8B8F /* DYHorizonalVC.m */,
+				07F0B4691C7C557800BA8B8F /* DYTitleView.h */,
+				07F0B46A1C7C557800BA8B8F /* DYTitleView.m */,
+				07F0B4631C7C50D700BA8B8F /* VC1.h */,
+				07F0B4641C7C50D700BA8B8F /* VC1.m */,
+				07F0B4661C7C50E200BA8B8F /* VC2.h */,
+				07F0B4671C7C50E200BA8B8F /* VC2.m */,
+				07F0B46C1C7C62AD00BA8B8F /* VC3.h */,
+				07F0B46D1C7C62AD00BA8B8F /* VC3.m */,
+				07F0B4551C7C46AB00BA8B8F /* Assets.xcassets */,
+				07F0B4571C7C46AB00BA8B8F /* LaunchScreen.storyboard */,
+				07F0B45A1C7C46AB00BA8B8F /* Info.plist */,
+				07F0B4491C7C46AB00BA8B8F /* Supporting Files */,
+			);
+			path = "类网易新闻横向滑动的实现方案2";
+			sourceTree = "<group>";
+		};
+		07F0B4491C7C46AB00BA8B8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07F0B44A1C7C46AB00BA8B8F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07F0B4451C7C46AB00BA8B8F /* 类网易新闻横向滑动的实现方案2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07F0B45D1C7C46AB00BA8B8F /* Build configuration list for PBXNativeTarget "类网易新闻横向滑动的实现方案2" */;
+			buildPhases = (
+				07F0B4421C7C46AB00BA8B8F /* Sources */,
+				07F0B4431C7C46AB00BA8B8F /* Frameworks */,
+				07F0B4441C7C46AB00BA8B8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "类网易新闻横向滑动的实现方案2";
+			productName = "类网易新闻横向滑动的实现方案2";
+			productReference = 07F0B4461C7C46AB00BA8B8F /* 类网易新闻横向滑动的实现方案2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07F0B43E1C7C46AB00BA8B8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = huangdeyu;
+				TargetAttributes = {
+					07F0B4451C7C46AB00BA8B8F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LF27SU9ML3;
+					};
+				};
+			};
+			buildConfigurationList = 07F0B4411C7C46AB00BA8B8F /* Build configuration list for PBXProject "类网易新闻横向滑动的实现方案2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07F0B43D1C7C46AB00BA8B8F;
+			productRefGroup = 07F0B4471C7C46AB00BA8B8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07F0B4451C7C46AB00BA8B8F /* 类网易新闻横向滑动的实现方案2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07F0B4441C7C46AB00BA8B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F0B4591C7C46AB00BA8B8F /* LaunchScreen.storyboard in Resources */,
+				07F0B4561C7C46AB00BA8B8F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07F0B4421C7C46AB00BA8B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F0B44E1C7C46AB00BA8B8F /* AppDelegate.m in Sources */,
+				07F0B46E1C7C62AD00BA8B8F /* VC3.m in Sources */,
+				07F0B44B1C7C46AB00BA8B8F /* main.m in Sources */,
+				07F0B46B1C7C557800BA8B8F /* DYTitleView.m in Sources */,
+				07F0B4651C7C50D700BA8B8F /* VC1.m in Sources */,
+				07F0B4621C7C4A8F00BA8B8F /* DYHorizonalVC.m in Sources */,
+				07F0B4681C7C50E200BA8B8F /* VC2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07F0B4571C7C46AB00BA8B8F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07F0B4581C7C46AB00BA8B8F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07F0B45B1C7C46AB00BA8B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		07F0B45C1C7C46AB00BA8B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07F0B45E1C7C46AB00BA8B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "类网易新闻横向滑动的实现方案2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fghjkl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		07F0B45F1C7C46AB00BA8B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "类网易新闻横向滑动的实现方案2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fghjkl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07F0B4411C7C46AB00BA8B8F /* Build configuration list for PBXProject "类网易新闻横向滑动的实现方案2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F0B45B1C7C46AB00BA8B8F /* Debug */,
+				07F0B45C1C7C46AB00BA8B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07F0B45D1C7C46AB00BA8B8F /* Build configuration list for PBXNativeTarget "类网易新闻横向滑动的实现方案2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F0B45E1C7C46AB00BA8B8F /* Debug */,
+				07F0B45F1C7C46AB00BA8B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07F0B43E1C7C46AB00BA8B8F /* Project object */;
+}
