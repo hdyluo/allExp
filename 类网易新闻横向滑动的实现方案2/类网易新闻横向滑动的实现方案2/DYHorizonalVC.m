@@ -12,14 +12,12 @@
 @interface DYHorizonalVC ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)UITableView * tableView;
 @property(nonatomic,strong)NSMutableArray * controllers;
-@property(nonatomic,assign)NSInteger currentControllerIndex;
 @property(nonatomic,strong)DYTitleView * titleView;
 @end
 
 @implementation DYHorizonalVC
 -(instancetype)initWithControllers:(NSArray *)controllers titles:(NSArray *)titles{
     if (self = [super init]) {
-        self.currentControllerIndex = 0;
         self.controllers = [controllers mutableCopy];
         self.titleView = [[DYTitleView alloc] initWithTitles:titles frame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 40)];
         [self.view addSubview:self.titleView];
@@ -45,11 +43,7 @@
 -(void)titleClicked{
     __weak typeof(self) weakSelf = self;
     self.titleView.buttonClickBlock = ^(UIButton *button){
-        if (weakSelf.currentControllerIndex != button.tag) {
-            [weakSelf.tableView setContentOffset:CGPointMake(0, button.tag * [UIScreen mainScreen].bounds.size.width)];
-            weakSelf.currentControllerIndex = button.tag;
-        }
-       
+        [weakSelf.tableView setContentOffset:CGPointMake(0, button.tag * [UIScreen mainScreen].bounds.size.width) animated:YES];
     };
 }
 

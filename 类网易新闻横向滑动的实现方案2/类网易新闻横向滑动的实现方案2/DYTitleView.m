@@ -44,12 +44,11 @@
             button.frame = CGRectMake(self.buttonWidth * idx, 0, self.buttonWidth, frame.size.height);
             [self addSubview:button];
             [button setTitle:obj forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+            [button setTintColor:[UIColor blackColor]];
             [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
             button.tag = idx;
             if (button.tag == self.currentTitleIndex) {
-                [button setSelected:YES];
+
                 button.transform = CGAffineTransformMakeScale(SELECTSCALE, SELECTSCALE);
             }
             [self.titleButtons addObject:button];
@@ -62,44 +61,22 @@
 #pragma mark - action
 -(void)buttonClicked:(UIButton *)button{
     if (self.buttonClickBlock) {
-        if (button.tag != self.currentTitleIndex) {
-            [self.titleButtons[self.currentTitleIndex] setSelected:NO];
-            UIButton * selectBtn = self.titleButtons[self.currentTitleIndex];
-            selectBtn.transform = CGAffineTransformMakeScale(1.0, 1.0);
-            button.transform = CGAffineTransformMakeScale(SELECTSCALE, SELECTSCALE);
-            self.currentTitleIndex = button.tag;
-            [self.titleButtons[self.currentTitleIndex] setSelected:YES];
-            [UIView animateWithDuration:0.3 animations:^{
-                self.lineView.center = CGPointMake(self.buttonWidth * 0.5 + button.tag * self.buttonWidth, self.lineView.center.y);
-            }];
-        }
         self.buttonClickBlock(button);
     }
    
-    NSLog(@"当前点击的标题是:%ld",button.tag);
+    NSLog(@"当前点击的标题是:%ld",(long)button.tag);
 }
 
 #pragma  mark - setter
 -(void)setCurrentOffset:(CGFloat)currentOffset{
-    _currentOffset = currentOffset * self.buttonWidth / SW;
-     self.lineView.center = CGPointMake(_currentOffset + self.buttonWidth * 0.5, self.lineView.center.y);
-    UIButton * lastBtn = self.titleButtons[self.currentTitleIndex];
-    CGFloat distance =  self.buttonWidth * lastBtn.tag;
-    CGFloat offset = distance - _currentOffset;
-  
-    if (distance - _currentOffset < -self.buttonWidth / 2) {
-        self.currentTitleIndex = lastBtn.tag+1;
-        [lastBtn setSelected:NO];
-        NSLog(@"当前tag是：%ld",self.currentTitleIndex);
-    }else if(distance - _currentOffset > self.buttonWidth / 2){
-        [lastBtn setSelected:NO];
-        self.currentTitleIndex = lastBtn.tag-1;
-    }else{
-        float percent =  fabs(distance - _currentOffset) / (self.buttonWidth / 2) *(SELECTSCALE - 1.0);
-        NSLog(@"当前偏移量是%f",percent);
-        lastBtn.transform = CGAffineTransformMakeScale(SELECTSCALE - percent, SELECTSCALE- percent);
+    _currentOffset = currentOffset * self.buttonWidth / [UIScreen mainScreen].bounds.size.width;
+    self.lineView.center = CGPointMake(_currentOffset + self.buttonWidth * 0.5, self.lineView.center.y);
+    for (UIButton * button in self.titleButtons) {
+        float percentOffset =fabs(_currentOffset - button.frame.origin.x) / self.buttonWidth;
+        if (percentOffset < 1) {
+            button.transform = CGAffineTransformMakeScale(1.2 - percentOffset * 0.2, 1.2 - percentOffset * 0.2);
+        }
     }
-    [self.titleButtons[self.currentTitleIndex] setSelected:YES];
    
 }
 @end
