@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#define COUNT 5
+#define COUNT 2
 #define SCROLLWIDTH self.view.frame.size.width
 #define SCROLLHEIGHT self.view.frame.size.height
 
