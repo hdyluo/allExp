@@ -31,7 +31,7 @@
     if (!exit || !isDir) {
         [fileManager createDirectoryAtPath:docPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    NSString * dbFile = [docPath stringByAppendingPathComponent:@"SHDB.sqlite"];
+    NSString * dbFile = [docPath stringByAppendingPathComponent:@"SHCEM.db"];
     return dbFile;
 }
 -(BOOL)isExistTable:(NSString *)tableName{
@@ -43,7 +43,6 @@
 }
 -(BOOL)createTable:(NSString *)tableName{
     if (tableName == nil  || tableName.length == 0) {
-        DLog(@"表为空");
         return NO;
     }
     __block BOOL ret = YES;
@@ -154,6 +153,12 @@
     }
     self.dbQueue = [[FMDatabaseQueue alloc] initWithPath:[self dbPathWithDirectoryName:nil]];
     return YES;
+}
+
+#pragma mark - private method
+
+-(NSData *)dicToData:(NSDictionary * )dic{
+    NSJSONSerialization
 }
 
 
