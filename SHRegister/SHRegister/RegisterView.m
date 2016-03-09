@@ -9,6 +9,8 @@
 #import "RegisterView.h"
 #import "FXBlurView.h"
 #import <Masonry.h>
+#import "LineView.h"
+
 #define  RSW [UIScreen mainScreen].bounds.size.width
 #define  RSH [UIScreen mainScreen].bounds.size.height
 @interface RegisterView()<UITextFieldDelegate,UIScrollViewDelegate>
@@ -22,6 +24,8 @@
 @property(nonatomic,strong)UIButton * getCodeBtn;       //第二页中的验证码倒计时按钮
 @property(nonatomic,strong)NSTimer * timer;               //倒计时
 @property(nonatomic,assign)NSInteger currentTime;       //当前时间
+
+@property(nonatomic,strong)NSMutableArray<LineView *> * lineViews;
 @end
 
 @implementation RegisterView
@@ -29,6 +33,7 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
         self.currentBtn = 0;
+        self.lineViews  = [NSMutableArray array];
        
         self.bgLayer = [[CALayer alloc] init];
         self.bgLayer.frame = self.bounds;
@@ -70,6 +75,17 @@
                 make.centerX.equalTo(button.mas_centerX);
                 make.top.equalTo(button.mas_bottom).offset(10);
             }];
+            if (i < 2) {
+                LineView * lineView = [[LineView alloc] init];
+                [self addSubview:lineView];
+                [self.lineViews addObject:lineView];
+                [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.left.equalTo(button.mas_right).offset(-3);
+                    make.centerY.equalTo(button.mas_centerY);
+                    make.width.mas_equalTo(space+3);
+                    make.height.mas_equalTo(3);
+                }];
+            }
             i++;
         }
         [self setupScrollView];
@@ -217,7 +233,7 @@
     [self.pwdTextField setFont:[UIFont systemFontOfSize:20]];
     self.pwdTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.pwdTextField.returnKeyType = UIReturnKeyDone;
-    self.pwdTextField.keyboardType = UIKeyboardTypeNumberPad;
+    self.pwdTextField.keyboardType = UIKeyboardAppearanceDefault;
     self.pwdTextField.textColor = [UIColor whiteColor];
     self.pwdTextField.delegate = self;
     [content0 addSubview:self.pwdTextField];
@@ -235,7 +251,7 @@
     [self.verifyTextField setFont:[UIFont systemFontOfSize:20]];
     self.verifyTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.verifyTextField.returnKeyType = UIReturnKeyDone;
-    self.verifyTextField.keyboardType = UIKeyboardTypeNumberPad;
+    self.verifyTextField.keyboardType = UIKeyboardAppearanceDefault;
     self.verifyTextField.textColor = [UIColor whiteColor];
     self.verifyTextField.delegate = self;
     [content0 addSubview:self.verifyTextField];
@@ -358,6 +374,16 @@
 
 #pragma mark - scrollView delegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    switch (self.currentBtn) {
+        case 1:
+        {
+           
+        }
+            break;
+        case 2:
+        default:
+            break;
+    }
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSLog(@"停止滚动");
@@ -393,17 +419,54 @@
             {
                 if (!button.enabled) {
                     [self startTimer];
-                    button.enabled = YES;
+                    [UIView transitionWithView:button duration:.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+                        button.enabled = YES;
+                    } completion:^(BOOL finished) {
+                        
+                    }];
                 }
                 [self.scrollView setContentOffset:CGPointMake(RSW, 0) animated:YES];
+                LineView * lineView = self.lineViews[0];
+                UIBezierPath *path = [UIBezierPath bezierPath];
+                [path moveToPoint:CGPointMake(-8, 1.5)];
+                UIButton * button0 = self.upButtons[0];
+                UIButton * button1 = self.upButtons[1];
+                CGFloat distance = button1.frame.origin.x - button0.frame.origin.x - button0.frame.size.width+14;
+                [path addLineToPoint:CGPointMake(distance,1.5)];
+                lineView.sharpLayer.path = path.CGPath;
+                CABasicAnimation *animator = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+                animator.fromValue = @0;
+                animator.toValue = @1;
+                animator.duration = .5;
+                [lineView.sharpLayer addAnimation:animator forKey:nil];
                 break;
             }
-            case 2://设置密码页面
+            case 2://设置密码页面{
+            {
                 if (!button.enabled) {
-                    button.enabled = YES;
+                    [UIView transitionWithView:button duration:.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+                        button.enabled = YES;
+                    } completion:^(BOOL finished) {
+                        
+                    }];
                 }
+                LineView * lineView = self.lineViews[1];
+                UIBezierPath *path = [UIBezierPath bezierPath];
+                [path moveToPoint:CGPointMake(-8, 1.5)];
+                UIButton * button0 = self.upButtons[0];
+                UIButton * button1 = self.upButtons[1];
+                CGFloat distance = button1.frame.origin.x - button0.frame.origin.x - button0.frame.size.width+14;
+                [path addLineToPoint:CGPointMake(distance,1.5)];
+                lineView.sharpLayer.path = path.CGPath;
+                CABasicAnimation *animator = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+                animator.fromValue = @0;
+                animator.toValue = @1;
+                animator.duration = .5;
+                [lineView.sharpLayer addAnimation:animator forKey:nil];
                 [self.scrollView setContentOffset:CGPointMake(RSW * 2, 0) animated:YES];
                 break;
+            }
+               
             default:
                 break;
         }
@@ -420,6 +483,7 @@
             [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
             [button setContentMode:UIViewContentModeScaleToFill];
             [_upButtons addObject:button];
+           // button.userInteractionEnabled = NO;
             if (i > 0) {
               //  button.hidden = YES;
                 button.enabled = NO;

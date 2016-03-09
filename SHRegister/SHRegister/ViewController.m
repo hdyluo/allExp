@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "FXBlurView.h"
 #import "RegisterView.h"
+
+#import "LineView.h"
 @interface ViewController ()<RegisgerViewDelegate>
 @property(nonatomic,strong)RegisterView * registerView;
 @end
@@ -21,7 +23,16 @@
     [self.view addSubview:self.registerView];
     self.registerView.delegate = self;
     [self registerClicked];
-
+    
+    
+    CAShapeLayer * sharpLayer = [CAShapeLayer layer];
+    sharpLayer.strokeColor = [[UIColor whiteColor] colorWithAlphaComponent:0.3].CGColor;
+    sharpLayer.lineWidth = 5;
+    UIBezierPath * path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, 0)];
+    [path addLineToPoint:CGPointMake(100, 100)];
+    sharpLayer.path = path.CGPath;
+    [self.view.layer addSublayer:sharpLayer];
 }
 
 

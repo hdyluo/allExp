@@ -15,6 +15,7 @@
 		0702FB3B1C8E6C5B00C6DB39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0702FB391C8E6C5B00C6DB39 /* LaunchScreen.storyboard */; };
 		0702FB441C8E719300C6DB39 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0702FB431C8E719300C6DB39 /* FXBlurView.m */; };
 		0702FB471C8E793E00C6DB39 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0702FB461C8E793E00C6DB39 /* RegisterView.m */; };
+		07C7F1F41C8FB772006F31AD /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C7F1F31C8FB772006F31AD /* LineView.m */; };
 		476636F232FA4DAC017F0864 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3804F61A5C3480CCDCD2B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		0702FB431C8E719300C6DB39 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		0702FB451C8E793E00C6DB39 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 		0702FB461C8E793E00C6DB39 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		07C7F1F21C8FB772006F31AD /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
+		07C7F1F31C8FB772006F31AD /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
 		9C46A718E86C9A78347C7DBE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A1F3804F61A5C3480CCDCD2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +80,8 @@
 				0702FB321C8E6C5B00C6DB39 /* ViewController.m */,
 				0702FB451C8E793E00C6DB39 /* RegisterView.h */,
 				0702FB461C8E793E00C6DB39 /* RegisterView.m */,
+				07C7F1F21C8FB772006F31AD /* LineView.h */,
+				07C7F1F31C8FB772006F31AD /* LineView.m */,
 				0702FB421C8E719300C6DB39 /* FXBlurView.h */,
 				0702FB431C8E719300C6DB39 /* FXBlurView.m */,
 				0702FB341C8E6C5B00C6DB39 /* Main.storyboard */,
@@ -236,6 +241,7 @@
 			files = (
 				0702FB331C8E6C5B00C6DB39 /* ViewController.m in Sources */,
 				0702FB441C8E719300C6DB39 /* FXBlurView.m in Sources */,
+				07C7F1F41C8FB772006F31AD /* LineView.m in Sources */,
 				0702FB301C8E6C5B00C6DB39 /* AppDelegate.m in Sources */,
 				0702FB2D1C8E6C5B00C6DB39 /* main.m in Sources */,
 				0702FB471C8E793E00C6DB39 /* RegisterView.m in Sources */,
